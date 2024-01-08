@@ -1,31 +1,43 @@
 {
-  "page": { "title": "Portfolio", "details": "Proje Detayları" },
+  "page": { "title": "Portfolio", "details": "Project Details" },
+  "portfolioItemComp": {
+    "category": "Category",
+    "client": "Client",
+    "location": "Location",
+    "date": "Publish Date",
+    "tech": "Tech"
+  },
+  "projectSlides": {
+    "title": "Portfolio",
+    "title2": "Portfolio Page",
+    "click": "For more details..."
+  },
   "items": [
     {
       "title": "CrunchyPix",
       "projectType": "Webpage Desing",
-      "description": "Initiated for my website and to showcase front-end skills. Developed dynamic components and styles. Features include international language options and smooth scroll transitions. Visit GitHub for details.",
+      "slideDescription": "Initiated for my website and to showcase front-end skills. Developed dynamic components and styles. Features include international language options and smooth scroll transitions. Visit GitHub for details.",
       "client": "Tahsin Ö.",
       "location": "Istanbul / TURKEY"
     },
     {
       "title": "CC Order",
       "projectType": "Landing Page",
-      "description": "Created for a credit card order landing page. Designed in Figma, implemented with React table. Access controlled by API key from the backoffice application. GitHub link confidential, but can share developed components and page code upon request.",
+      "slideDescription": "Created for a credit card order landing page. Designed in Figma, implemented with React table. Access controlled by API key from the backoffice application. GitHub link confidential, but can share developed components and page code upon request.",
       "client": "Novem Gold",
       "location": "Linz / AUSTRIA"
     },
     {
       "title": "Minting UI",
       "projectType": "UI/UX",
-      "description": "Developed for a UI using minting and burning functions for NNN and NVM tokens on Binance Smart Chain (BSC). Eth-2 scaffold used, contracts obtained from BSC, deployed, and ABI created. Integrated with BSC using Wagmi, enabling minting and burning functions. Other functions available on the debugging page.",
+      "slideDescription": "Developed for a UI using minting and burning functions for NNN and NVM tokens on Binance Smart Chain (BSC). Eth-2 scaffold used, contracts obtained from BSC, deployed, and ABI created. Integrated with BSC using Wagmi, enabling minting and burning functions. Other functions available on the debugging page.",
       "client": "CypherX",
       "location": "Munich / GERMANY"
     },
     {
       "title": "KYK Eletric Inc.",
       "projectType": "Webpage Desing",
-      "description": "My first website developed using WordPress and limited code. Developed with many custom design elements.",
+      "slideDescription": "My first website developed using WordPress and limited code. Developed with many custom design elements.",
       "client": "KYK Electric Inc.",
       "location": "Istanbul / TURKEY"
     }

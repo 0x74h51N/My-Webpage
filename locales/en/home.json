@@ -116,28 +116,5 @@
       { "title": "The Art of Clean & Understandable Code" },
       { "title": "Always Up-to-Date with Technology" }
     ]
-  },
-  "projectSlides": [
-    {
-      "title": "Portfolio",
-      "title2": "Portfolio Page",
-      "click": "For more details..."
-    },
-    {
-      "title": "CrunchyPix",
-      "description": "Initiated for my website and to showcase front-end skills. Developed dynamic components and styles. Features include international language options and smooth scroll transitions. Visit GitHub for details."
-    },
-    {
-      "title": "CC Order Landing Page",
-      "description": "Created for a credit card order landing page. Designed in Figma, implemented with React table. Access controlled by API key from the backoffice application. GitHub link confidential, but can share developed components and page code upon request."
-    },
-    {
-      "title": "Minting UI",
-      "description": "Developed for a UI using minting and burning functions for NNN and NVM tokens on Binance Smart Chain (BSC). Eth-2 scaffold used, contracts obtained from BSC, deployed, and ABI created. Integrated with BSC using Wagmi, enabling minting and burning functions. Other functions available on the debugging page."
-    },
-    {
-      "title": "KYK Eletric Inc.",
-      "description": "My first website developed using WordPress and limited code. Developed with many custom design elements."
-    }
-  ]
+  }
 }

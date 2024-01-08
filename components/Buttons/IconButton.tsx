@@ -31,7 +31,7 @@ import {
 import { MdAccessibility, MdTouchApp } from "react-icons/md";
 import { DiResponsive } from "react-icons/di";
 import { TfiLayoutAccordionList } from "react-icons/tfi";
-import isClickable, { clickableChange } from "@/store/redux/isClickable";
+import { clickableChange } from "@/store/redux/isClickable";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/store";
 

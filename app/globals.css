@@ -28,28 +28,28 @@ body {
   cursor: none !important;
 }
 :root {
-  --line-height: 130px;
+  --line-height: 250px;
 }
 
 .repatingLines {
   background-image: repeating-linear-gradient(
     to right,
     #262626,
-    #262626 1.5px,
-    #131313 1.5px,
+    #262626 0px,
+    #131313 1px,
     #131313 var(--line-height)
   );
 }
 
 @media screen and (max-width: 650px) {
   :root {
-    --line-height: 80px;
+    --line-height: 180px;
   }
 }
 
 @media screen and (max-width: 450px) {
   :root {
-    --line-height: 60px;
+    --line-height: 100px;
   }
 }
 

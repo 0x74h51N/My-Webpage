@@ -57,6 +57,12 @@ const PortfolioItem = ({
       dispatch(clickableChange(false));
     }
   };
+  const onClickHandler = () => {
+    () => router.push(`/portfolio/${id}`);
+    if (isClickable == true) {
+      dispatch(clickableChange(false));
+    }
+  };
   return (
     <div
       className="relative flex flex-col items-center justify-between overflow-hidden"
@@ -76,11 +82,11 @@ const PortfolioItem = ({
         <Image
           src={image}
           alt={imageAlt}
-          width={isMobile ? 400 : 630}
+          width={isMobile ? 400 : 600}
           height={isMobile ? 300 : 500}
           objectPosition="center center"
-          className="object-cover object-center w-full h-full rounded-xl"
-        ></Image>
+          className=" object-cover w-full h-full rounded-xl"
+        />
         <div className="absolute w-full h-full  group-hover:backdrop-filter group-hover:backdrop-blur-sm bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-500 ease-in-out rounded-xl " />
         <motion.div
           variants={slideIn("up", "spring", 0.2, 0.75)}
@@ -92,7 +98,7 @@ const PortfolioItem = ({
             href={`/portfolio/${id}`}
             passHref
             className="cursor-none"
-            onClick={() => router.push(`/portfolio/${id}`)}
+            onClick={onClickHandler}
           >
             <FaAnglesRight className="text-white text-2xl -rotate-45" />
           </Link>
@@ -102,8 +108,10 @@ const PortfolioItem = ({
         <Link
           href={`/portfolio/${id}`}
           passHref
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
           className="w-auto md:py-9 px-5 p-6 md:h-32 h-20 text-stone-200 cursor-none"
-          onClick={() => router.push(`/portfolio/${id}`)}
+          onClick={onClickHandler}
         >
           <h2 className="md:text-lg text-sm text-log-col">
             {t(`${projectType}`)}

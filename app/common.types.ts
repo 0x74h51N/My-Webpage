@@ -44,6 +44,10 @@ export type HandleScroll = {
 };
 
 export type slide = {
+  id: any;
+  slideImage?: string;
+  slideDescription?: string;
+  imageAlt?: string;
   imageUrl?: string;
   imageUrlV?: string;
   imageUrlH?: string;
@@ -56,6 +60,7 @@ export type slide = {
   githubLink?: string;
   icons?: Icon[];
   labels?: string[];
+  projectInfo?: ProjectInfo;
 };
 
 export type CardSections = {
@@ -115,10 +120,12 @@ export type logoType = {
 
 export type PortfolioItemProps = {
   _id: string;
+  slideImage: string;
   image: string;
   imageAlt: string;
   title: string;
   projectType: string;
+  slideDescription: string;
   description?: string;
   description2?: string;
   description3?: string;

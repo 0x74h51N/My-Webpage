@@ -1,8 +1,8 @@
-import { slide } from "@/app/common.types";
+import { PortfolioItemProps } from "@/app/common.types";
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 interface SelectedSlideState {
-  selectedSlide: slide | undefined;
+  selectedSlide: PortfolioItemProps | undefined;
   slideSelected: boolean | undefined;
 }
 
@@ -15,7 +15,7 @@ const selectedSlideSlice = createSlice({
   name: "selectedSlide",
   initialState,
   reducers: {
-    setSlide: (state, action: PayloadAction<slide>) => {
+    setSlide: (state, action: PayloadAction<PortfolioItemProps>) => {
       state.selectedSlide = action.payload;
       state.slideSelected = true;
     },

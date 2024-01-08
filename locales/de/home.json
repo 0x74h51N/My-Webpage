@@ -123,28 +123,5 @@
       { "title": "Die Kunst von sauberem Code" },
       { "title": "Immer auf dem neuesten Stand" }
     ]
-  },
-  "projectSlides": [
-    {
-      "title": "Portfolio",
-      "title2": "Portfolio Seite",
-      "click": "Für weitere Details..."
-    },
-    {
-      "title": "CrunchyPix",
-      "description": "Initiiert für meine Website und um Front-End-Fähigkeiten zu präsentieren. Dynamische Komponenten und Stile entwickelt. Zu den Funktionen gehören internationale Sprachoptionen und sanfte Bildlaufübergänge. Besuchen Sie GitHub für Details."
-    },
-    {
-      "title": "CC Order Landing Page",
-      "description": "Erstellt für eine Landing Page für Kreditkartenaufträge. Entworfen in Figma, implementiert mit React-Table. Zugriff durch API-Schlüssel aus der Backoffice-Anwendung gesteuert. GitHub-Link vertraulich, aber entwickelte Komponenten und Seitencode auf Anfrage verfügbar."
-    },
-    {
-      "title": "Minting UI",
-      "description": "Entwickelt für eine Benutzeroberfläche unter Verwendung von Präge- und Brennfunktionen für NNN- und NVM-Token auf der Binance Smart Chain (BSC). Eth-2-Gerüst verwendet, Verträge von BSC bezogen, bereitgestellt und ABI erstellt. Integration mit BSC über Wagmi, ermöglicht Präge- und Brennfunktionen. Weitere Funktionen auf der Debugging-Seite verfügbar."
-    },
-    {
-      "title": "KYK Eletric GmbH",
-      "description": "Meine erste Website, entwickelt mit WordPress und begrenztem Code. Erstellt mit vielen individuellen Designelementen."
-    }
-  ]
+  }
 }

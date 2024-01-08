@@ -1,7 +1,7 @@
 "use client";
 import { PortfolioItemProps } from "../common.types";
-import { portfolioPageItems } from "@/constants/portfolioPageItems";
-import PortfolioItem from "../../components/PortfolioItem";
+import { portfolioPageItems } from "@/constants/portfolioItems";
+import PortfolioItem from "./components/PortfolioItem";
 import { polygonIn } from "@/utils/motion";
 import { motion } from "framer-motion";
 
@@ -24,6 +24,8 @@ const Portfolio = () => {
               imageAlt={item.imageAlt}
               title={item.title}
               projectType={item.projectType}
+              slideImage={""}
+              slideDescription={""}
             />
           ))}
         </div>

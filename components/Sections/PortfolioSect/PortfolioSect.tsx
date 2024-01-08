@@ -1,7 +1,6 @@
 "use client";
 import CarouselSlider from "../../Slider/Portfolio Slider/CarouselSlider";
 import SlideModal from "../../Slider/Portfolio Slider/Child/SlideModal";
-import { projectSlides } from "@/constants/projectSlides";
 import { motion } from "framer-motion";
 import { generateSpans } from "../../GenerateSpans";
 import { slideIn } from "@/utils/motion";
@@ -10,9 +9,10 @@ import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { setIsTranslationsLoaded } from "@/store/redux/language";
 import { RootState } from "@/store";
+import { portfolioPageItems } from "@/constants/portfolioItems";
 
 const PortfolioSect = () => {
-  const { t, i18n } = useTranslation(["home"]);
+  const { t, i18n } = useTranslation(["portfolio"]);
   const isTranslationsLoadedRedux = useSelector(
     (state: RootState) => state.language.isTranslationsLoaded
   );
@@ -40,14 +40,14 @@ const PortfolioSect = () => {
           className="text-stone-200 font-black md:text-[55x] sm:text-[50px] xs:text-[40px] text-[30px] max-w-2xl leading-[60px] z-auto"
         >
           {generateSpans({
-            text: `${t("projectSlides.0.title")}`,
+            text: `${t("projectSlides.title")}`,
             colorType: "vibrantColors",
             zeroColor: "#FFFFFF",
           })}
         </motion.h1>
       </div>
       <div className="w-full h-auto min-w-[100sv] z-0 bg-cool-gray-800 pt-10 pb-14 mt-3 overflow-visible">
-        <CarouselSlider slides={projectSlides} />
+        <CarouselSlider slides={portfolioPageItems} />
       </div>
       <div className="z-50">
         <SlideModal />

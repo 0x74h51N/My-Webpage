@@ -4,7 +4,7 @@ import SwiperCore from "swiper";
 import { EffectCoverflow, Autoplay } from "swiper/modules";
 import "swiper/css";
 import Label from "../../Labels";
-import { slide } from "@/app/common.types";
+import { PortfolioItemProps } from "@/app/common.types";
 import { useDispatch, useSelector } from "react-redux";
 import { setSlide } from "@/store/redux/selectedSlide";
 import { useTranslation } from "react-i18next";
@@ -20,22 +20,22 @@ import { motion } from "framer-motion";
 SwiperCore.use([Autoplay, EffectCoverflow]);
 
 interface CarouselSliderProps {
-  slides: slide[];
+  slides: PortfolioItemProps[];
 }
 
-const CarouselSlider = memo(({ slides }: CarouselSliderProps) => {
+const CarouselSlider = memo(({ slides }: { slides: PortfolioItemProps[] }) => {
   const [activeIndex, setActiveIndex] = useState(() => {
     return 0;
   });
   const dispatch = useDispatch();
-  const { t } = useTranslation(["home"]);
+  const { t } = useTranslation(["portfolio"]);
   const isTranslationsLoadedRedux = useSelector(
     (state: RootState) => state.language.isTranslationsLoaded
   );
   const isMobile = useSelector((state: RootState) => state.isMobile.mobile);
   const isTablet = useSelector((state: RootState) => state.isTablet.tablet);
-  const _selectedSlide = (slide: slide) => {
-    dispatch(setSlide(slide));
+  const _selectedSlide = (_slide: PortfolioItemProps) => {
+    dispatch(setSlide(_slide));
   };
   useEffect(() => {
     if (i18n.isInitialized) {
@@ -88,7 +88,7 @@ const CarouselSlider = memo(({ slides }: CarouselSliderProps) => {
         speed={1000}
         className="h-auto min-h-[500px] cursor-none overflow-visible"
       >
-        {slides.map((slide: slide, index: number) => (
+        {slides.map((slide: PortfolioItemProps, index: number) => (
           <SwiperSlide key={index + 1}>
             <div
               className={`relative overflow-visible ${
@@ -98,8 +98,8 @@ const CarouselSlider = memo(({ slides }: CarouselSliderProps) => {
             >
               <Image
                 loading="lazy"
-                src={slide.imageUrl || ""}
-                alt={slide.title || ""}
+                src={slide.slideImage || ""}
+                alt={slide.imageAlt || ""}
                 width="1000"
                 height="1000"
                 className="object-cover w-full h-full my-5"
@@ -109,8 +109,8 @@ const CarouselSlider = memo(({ slides }: CarouselSliderProps) => {
                 <h2 className="text-lg font-bold">{t(`${slide.title}`)}</h2>
                 <div className="flex">
                   <div className="flex flex-wrap items-start mr-auto">
-                    {slide.labels &&
-                      slide.labels.map((label, labelIndex) => (
+                    {slide.ProjectInfo &&
+                      slide.ProjectInfo.tech.map((label, labelIndex) => (
                         <Label
                           key={`label-${index}-${labelIndex}`}
                           text={label}
