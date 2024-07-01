@@ -16,7 +16,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^2.2.1",
+    "@reduxjs/toolkit": "^2.2.6",
     "@supabase/supabase-js": "^2.43.4",
     "@vercel/analytics": "^1.1.1",
     "@vercel/speed-insights": "^1.0.1",
